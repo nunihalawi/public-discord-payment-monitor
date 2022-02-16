@@ -33,7 +33,7 @@ async def start():
                     embed.add_field(name="**Platform**", value="Zelle", inline=True)
                     embed.add_field(name="**Amount**", value=f'{money}', inline=False)
                     embed.add_field(name="**Sent To**", value=f'{first_last[0]} {first_last[1]}',inline=False)
-                    embed.set_footer(name='Created by hate#2158', icon_url='https://i.pinimg.com/originals/b2/7d/2d/b27d2d22ab6b6c7d9e7dfd862d607786.jpg')
+                    embed.set_footer(text='Created by hate#2158', icon_url='https://i.pinimg.com/originals/b2/7d/2d/b27d2d22ab6b6c7d9e7dfd862d607786.jpg')
                     embed.set_thumbnail(url="https://play-lh.googleusercontent.com/F4U2pL8z-Ic5FzCfe1xVXMWRvff6oEBIzDsyGRc4mE3bIUPiCfhuXXXvTOfcpVglKqs")
                     emailSession.mark_seen(messages1[-1][0])
                     async with aiohttp.ClientSession() as session:  
@@ -53,7 +53,7 @@ async def start():
                     embed.add_field(name="**Platform**", value="Cashapp", inline=True)
                     embed.add_field(name="**Amount**", value=money, inline=False)
                     embed.add_field(name="**Sender**",value=f'{sender_first_name} {sender_last_name}',inline=False)
-                    embed.set_footer(name='Created by hate#2158', icon_url='https://i.pinimg.com/originals/b2/7d/2d/b27d2d22ab6b6c7d9e7dfd862d607786.jpg')
+                    embed.set_footer(text='Created by hate#2158', icon_url='https://i.pinimg.com/originals/b2/7d/2d/b27d2d22ab6b6c7d9e7dfd862d607786.jpg')
                     embed.set_thumbnail(url="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Square_Cash_app_logo.svg/1024px-Square_Cash_app_logo.svg.png")
                     async with aiohttp.ClientSession() as session:  
                         webhook = Webhook.from_url('', adapter=AsyncWebhookAdapter(session))
@@ -71,7 +71,7 @@ async def start():
                     embed.add_field(name="**Platform**", value="Cashapp", inline=True)
                     embed.add_field(name="**Amount**", value=money, inline=False)
                     embed.add_field(name="**Sent To**",value=f'{name[5]} {name[6]}',inline=False)
-                    embed.set_footer(name='Created by hate#2158', icon_url='https://i.pinimg.com/originals/b2/7d/2d/b27d2d22ab6b6c7d9e7dfd862d607786.jpg')
+                    embed.set_footer(text='Created by hate#2158', icon_url='https://i.pinimg.com/originals/b2/7d/2d/b27d2d22ab6b6c7d9e7dfd862d607786.jpg')
                     embed.set_thumbnail(url="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Square_Cash_app_logo.svg/1024px-Square_Cash_app_logo.svg.png")
                     emailSession.mark_seen(messages1[-1][0])
                     async with aiohttp.ClientSession() as session:  
