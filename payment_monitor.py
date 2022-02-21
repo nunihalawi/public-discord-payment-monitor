@@ -5,6 +5,9 @@ import time
 import discord
 from discord.ext import commands
 import asyncio
+import aiohttp
+from bs4 import BeautifulSoup
+from lmxl import etree, html
 
 async def start():
     while True:
