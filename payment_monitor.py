@@ -80,6 +80,23 @@ async def start():
                     print('cashapp refund detected')
                     to_be_added = True
                     refund = True
+                elif messages1[-1][1].sent_from[0]['email'] == 'service@paypal.com':
+                    print('paypal money detected')
+                    names = messages1[-1][1].body['plain'][0].split(';margin:0" dir="ltr"><span>')[1]
+                    premoney = messages1[-1][1].body['plain'][0]
+                    page_html =  etree.tostring(html.fromstring(premoney ), encoding='unicode', pretty_print=True)
+                    soup = BeautifulSoup(page_html, 'html.parser')
+                    names1,names2 = names.split(' ')[0],names.split(' ')[1]
+                    results = soup.find(id='preHeader').text.split('$')[1]
+                    embed=discord.Embed(title="PayPal Payment Detected", color=0x7aff7f)
+                    embed.add_field(name="**Platform**", value="PayPal", inline=True)
+                    embed.add_field(name="**Amount**", value=results, inline=False)
+                    embed.add_field(name="**Sent From**",value=f'{names1} {names2}',inline=False)
+                    embed.set_thumbnail(url='https://www.freepnglogos.com/uploads/paypal-logo-png-7.png')
+                    emailSession.mark_seen(messages1[-1][0])
+                    async with aiohttp.ClientSession() as session:  
+                        webhook = Webhook.from_url('https://discord.com/api/webhooks/939363792117182485/UG7Y-PfhFrnxS71yC2ow6izti1ai2dF7pXkUD36YCzmBZqFm2n_zvbg5lyaqQYzTWzny', adapter=AsyncWebhookAdapter(session))
+                        await webhook.send(embed=embed)
     
         except Exception as e:
             print("Error: " + str(e))
