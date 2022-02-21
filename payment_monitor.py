@@ -4,7 +4,9 @@ from datetime import date
 import time
 import discord
 from discord.ext import commands
+from pymongo import MongoClient
 import asyncio
+from discord import Webhook, AsyncWebhookAdapter
 import aiohttp
 from bs4 import BeautifulSoup
 from lxml import etree, html
