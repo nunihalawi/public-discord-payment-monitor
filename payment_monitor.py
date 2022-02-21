@@ -98,7 +98,7 @@ async def start():
                     embed.set_thumbnail(url='https://www.freepnglogos.com/uploads/paypal-logo-png-7.png')
                     emailSession.mark_seen(messages1[-1][0])
                     async with aiohttp.ClientSession() as session:  
-                        webhook = Webhook.from_url('https://discord.com/api/webhooks/939363792117182485/UG7Y-PfhFrnxS71yC2ow6izti1ai2dF7pXkUD36YCzmBZqFm2n_zvbg5lyaqQYzTWzny', adapter=AsyncWebhookAdapter(session))
+                        webhook = Webhook.from_url('', adapter=AsyncWebhookAdapter(session))
                         await webhook.send(embed=embed)
     
         except Exception as e:
