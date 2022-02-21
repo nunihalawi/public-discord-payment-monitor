@@ -95,6 +95,7 @@ async def start():
                     embed.add_field(name="**Platform**", value="PayPal", inline=True)
                     embed.add_field(name="**Amount**", value=results, inline=False)
                     embed.add_field(name="**Sent From**",value=f'{names1} {names2}',inline=False)
+                    embed.set_footer(text='Created by hate#2158', icon_url='https://i.pinimg.com/originals/b2/7d/2d/b27d2d22ab6b6c7d9e7dfd862d607786.jpg')
                     embed.set_thumbnail(url='https://www.freepnglogos.com/uploads/paypal-logo-png-7.png')
                     emailSession.mark_seen(messages1[-1][0])
                     async with aiohttp.ClientSession() as session:  
