@@ -52,13 +52,7 @@ async def executeWebhook(platform, amount, sent_from):
     channel = bot.get_channel(int(settings['monitor_channel_id']))
     await channel.send(embed=embed)
     
-#emailSession = Imbox("imap.gmail.com",
- #   username="tobiasejohansena365@gmail.com", # put email
-  #  password="oopupbbuopdstogg", # put app password
-   # ssl=True,
-    #ssl_context=None,
- #   starttls=False,
-#)
+
 
 # emails sent_from to check from (only these emails formats are supported)
 
