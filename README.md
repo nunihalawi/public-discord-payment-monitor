@@ -1,5 +1,5 @@
 # public-discord-payment-monitor
-detect zelle/payments and send to discord webhook
+detect zelle, cashapp, and venmo payments through emails (gmail)
 
 
-make sure to add webhooks in THREE different places, and make sure to enable https://myaccount.google.com/lesssecureapps on your gmail and put your gmail credentials in the code.
+make sure to go into settings.json and input the gmail, the app password (must have 2fa enabled), the channel that you want to send the payments to in real time (bot must have access to this channel) and the discord bot token
